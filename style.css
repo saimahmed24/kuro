@@ -1,0 +1,551 @@
+@import url('https://fonts.cdnfonts.com/css/gang-of-three');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --default-color: white;
+    --primary-color: #f26522;
+    --secondary-color: #d9d9d9;
+    --tertiary-color: #212121;
+}
+
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+    background-color: var(--tertiary-color);
+    
+}
+/* Scrollbar styles for WebKit browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 6px; /* Width of the scrollbar */  
+
+}
+  
+  ::-webkit-scrollbar-track {
+    background: var(--secondary-color); /* Background of the scrollbar track */
+    /* Rounded corners for the track */
+    margin-top: 80px;
+   
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    
+    border-radius: 00vw; /* Rounded corners for the thumb */
+    margin-block: 80px;
+    
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-color); /* Color when hovered */
+  }
+  
+  /* Scrollbar styles for Firefox */
+  .scrollable {
+    scrollbar-width: 8px; /* Makes scrollbar thinner */
+    
+    /* scrollbar-color: #888 #f1f1f1;  */
+  }
+  
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+}
+
+.h1 {
+    font-family: 'Gang of Three', sans-serif;
+    font-size: 64px;
+}
+
+.h2 {
+    font-size: 24.447px;
+}
+
+.h3 {
+    font-size: 15.137px;
+
+}
+
+
+
+body {
+    background-color: var(--secondary-color);
+    position: relative;
+}
+
+/* ==============================NAVBAR STARTS HERE============================== */
+
+
+nav {
+    
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    
+    z-index: 100;
+}
+
+nav ul {
+    border-bottom: #f26522 2px solid;
+    margin: 0 auto;
+    height: 80px;
+    background-color: var(--tertiary-color);
+    color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 24px;
+
+}
+
+nav ul li {
+   
+    font-weight: 700;
+    transition: transform 0.3s ease-in, padding 0.3s ease;
+
+}
+
+
+.active {
+
+    color: var(--default-color);
+    margin-right: 20px;
+    padding: 4px;
+    line-height: 30px;
+    border-radius: 20px;
+   
+}
+
+.blurr {
+    filter: blur(0.8px);
+}
+
+
+.hov:hover {
+    color: var(--secondary-color);
+    transform: scale(1.1);
+    cursor: pointer;
+
+}
+
+/* ==============================NAVBAR ENDS HERE============================== */
+/* ============================================================================ */
+/* ==============================HERO STARTS HERE============================== */
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+    /* background-color: var(--secondary-color); */
+  
+}
+.aboutkuro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 70%;
+    height: 80vh;
+    /* background-color: var(--secondary-color); */
+
+}
+.hero>img {
+    margin-bottom: 1%;
+}
+
+.hero> :first-child,
+.hero> :nth-child(3) {
+    padding-bottom: 12px;
+}
+
+
+.socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 10px;
+}
+
+.socials button {
+    border: none;
+    background: none;
+
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 8px;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: none;
+    transition: background-color 0.2s ease-in, transform 0.2s ease-in;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: #F4834E;
+    transform: scale(1.1);
+}
+.scrolldown{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.scrolldown img{
+    padding-top: 10px;
+}
+.sectionAbout {
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--secondary-color);
+    transition: transform 0.5s ease;
+}
+
+
+
+.aboutContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    background-color: var(--tertiary-color);
+    padding: 20px;
+    border-radius: 16px;
+    color: var(--secondary-color);
+    gap: 20px;
+}
+.aboutContent button {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+.aboutServices {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 40%;
+    margin-top: 40px;
+}
+.aboutServices .clients{
+    display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+.aboutServices .clients img{
+    padding: 4%;
+}
+.aboutServices .project{
+    display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+.aboutServices .project img{
+    padding: 4%;
+}
+/* ==============================HERO ENDS HERE============================== */
+/* ========================================================================== */
+/* ==============================SERVICES STARTS HERE============================== */
+
+.servicesSection {
+background-color: #f26522;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center; 
+
+}
+.servicesSection > :first-child{
+    padding-top: 8px;
+}
+.servicesSection span{
+    color: var(--secondary-color);
+}
+
+.servicesSection .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin: 4%;
+}
+.card{
+    
+    width: 520px;
+    height: 320px;
+    border: none;
+    border-radius: 8px;
+    background-color: #F4834E;
+    position: relative;
+}
+
+.card img{
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    
+}
+.card1 img{
+    width: 100%;
+}
+.overlay {
+    color: var(--secondary-color);
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    align-items: center;
+    transition: opacity 0.2s ease-in;
+}
+.overlay .tags{
+    gap: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 70%;
+}
+.overlay .tags span{
+    background-color: var(--primary-color);
+    padding: 6px;
+    border-radius: 16px;
+    
+}
+.overlay:hover {
+    background-color: rgba(0, 0, 0, 0.75);
+    opacity: 100;
+}
+.overlay button {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 100%;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    line-height: 50px;
+
+ 
+    transition: background-color 0.2s ease-in, transform 0.2s ease-in;
+}
+.overlay button img {
+    height: 20px;
+    width: 20px;
+    filter: invert(1);
+}
+.overlay button:hover {
+    background-color: #F4834E;
+    transform: scale(1.1);
+}
+
+/* ==============================SERVICES ENDS HERE============================== */
+/* ========================================================================== */
+/* ==============================CONTACT STARTS HERE============================== */
+
+.contact-section {
+    padding: 40px;
+    background-color: var(--secondary-color);
+}
+
+.contact-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--tertiary-color);
+}
+
+/* Contact Info */
+.contact-info-box {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.contact-item {
+    flex: 1;
+    text-align: center;
+}
+
+.contact-method {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: var(--tertiary-color);
+}
+
+.contact-link {
+    color: var(--tertiary-color);
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.contact-link:hover {
+    color: var(--primary-color);
+}
+
+.contact-icon {
+    width: 24px;
+    height: 24px;
+    fill: var(--primary-color);
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1rem;
+    color: var(--tertiary-color);
+}
+
+.form-input, .form-textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid var(--secondary-color);
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+
+.form-input:focus, .form-textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+.form-button {
+    padding: 12px;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+.form-button:hover {
+    background-color: var(--tertiary-color);
+}
+/* ===================================================================================================== */
+.contact-section{
+    height: 100vh;
+}
+/* ===================================================================================================== */
+/* Hide carousel by default */
+/* Carousel Modal */
+.carousel-modal {
+    display: none; /* Hidden by default */
+    position: fixed; 
+    z-index: 100; 
+    left: 0;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.9); /* Black background with opacity */
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-content {
+    margin: auto;
+    padding: 20px;
+    width: 70%;
+    position: relative;
+}
+
+.close-carousel {
+    color: white;
+    position: absolute;
+    top: 2%;
+    right: 2.75%;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-carousel:hover {
+    color: var(--primary-color);
+}
+
+/* Carousel Styles */
+.carousel {
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-slide {
+    
+    display: none;
+   
+}
+
+.carousel-slide img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Navigation Arrows */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next:hover, .prev:hover{
+    color: var(--primary-color);
+}
